@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Itaewon Records</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lat</th>
+      <th>Lng</th>
+      <th>Name</th>
+      <th>Url</th>
+      <th>When</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @itaewon_records.each do |itaewon_record| %>
+      <tr>
+        <td><%= itaewon_record.lat %></td>
+        <td><%= itaewon_record.lng %></td>
+        <td><%= itaewon_record.name %></td>
+        <td><%= itaewon_record.url %></td>
+        <td><%= itaewon_record.when %></td>
+        <td><%= link_to 'Show', itaewon_record %></td>
+        <td><%= link_to 'Edit', edit_itaewon_record_path(itaewon_record) %></td>
+        <td><%= link_to 'Destroy', itaewon_record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Itaewon Record', new_itaewon_record_path %>

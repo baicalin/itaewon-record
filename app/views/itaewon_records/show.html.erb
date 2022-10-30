@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @itaewon_record.lat %>
+</p>
+
+<p>
+  <strong>Lng:</strong>
+  <%= @itaewon_record.lng %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @itaewon_record.name %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @itaewon_record.url %>
+</p>
+
+<p>
+  <strong>When:</strong>
+  <%= @itaewon_record.when %>
+</p>
+
+<%= link_to 'Edit', edit_itaewon_record_path(@itaewon_record) %> |
+<%= link_to 'Back', itaewon_records_path %>

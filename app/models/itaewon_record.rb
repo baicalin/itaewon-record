@@ -1,0 +1,2 @@
+class ItaewonRecord < ApplicationRecord
+end

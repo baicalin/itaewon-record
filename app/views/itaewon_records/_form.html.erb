@@ -1,0 +1,42 @@
+<%= form_with(model: itaewon_record, local: true) do |form| %>
+  <% if itaewon_record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(itaewon_record.errors.count, "error") %> prohibited this itaewon_record from being saved:</h2>
+
+      <ul>
+        <% itaewon_record.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :lat %>
+    <%= form.text_field :lat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lng %>
+    <%= form.text_field :lng %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_field :url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :when %>
+    <%= form.datetime_select :when %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
